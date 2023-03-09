@@ -1,0 +1,103 @@
+        header {
+            grid-area: header;
+            background-color: yellow;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: gray;
+        }
+
+        main {
+            grid-area: main;
+            background-color: orange;
+        }
+
+        .aside1 {
+            grid-area: aside1;
+            background-color: blue;
+        }
+		
+
+        .aside2 {
+            grid-area: aside2;
+            background-color: pink;
+        }
+		
+
+        footer {
+            grid-area: footer;
+            background-color: green;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'nav nav main main main aside1'
+                'nav nav main main main aside1'
+                'aside2 aside2 aside2 footer footer footer';
+            grid-gap: .5em;
+			
+			max-width: 62em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+		
+		.floatleft {
+			float: left;
+			text-align: center;
+		}
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            body {
+                background: blue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main aside1 aside1'
+					'aside2 aside2 aside2 aside2 aside2 aside2' 
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body {
+                background: fuchsia;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside1 aside1 aside1 aside1 aside1 aside1'
+					'aside2 aside2 aside2 aside2 aside2 aside2'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
