@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+header {
+            grid-area: header;
+            background-color:fff;
+	font-family:'Roboto', sans-serif;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color:#0079c2;
+			font-family:'Roboto', sans-serif;
+        }
+
+        main {
+            grid-area: main;
+            background-color:#fff;
+			font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .aside1 {
+            grid-area: aside1;
+            background-color:rgba(226,233,255,1.00);
+			background-color:#8baddc;
+			padding-left:.5em;
+        }
+		
+/* I have removed the aside 2 for now --kturpin
+        .aside2 {
+            grid-area: aside2;
+            background-color: pink;
+        }
+*/
+
+        footer {
+            grid-area: footer;
+            background-color: #0079c2;
+			color:#fff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+				'nav nav nav nav nav nav'
+                'aside1 aside1 main main main main'
+                'footer footer footer footer footer footer';
+            grid-gap: .5em;
+			
+			max-width: 62em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+		
+		.floatleft {
+			float: left;
+			text-align: center;
+		}
+
+/*#####
+Navigation Bar
+######*/
+
+        ul li {
+            list-style-type: none;
+			display:inline-block;
+        }
+		
+		nav ul {
+			margin:0;
+			padding:0;
+		}
+
+		nav a {
+    		display: block;
+   			padding: 0.5em 1em;
+   			font-size: 1.5em;
+    		color: white;
+   			border-right: 1px solid white;
+		}
+		
+		nav a:last-of-type {
+			border-right:none;
+		}
+nav a:hover {
+	/*these are just placeholder colors and will need changed*/
+	background-color:green;
+	color:black;
+}
+
+/*######
+End Nav Bar
+######*/
+
+/*make the header a flexbox so text stays on left and img stays on right, unless there isn't enough room*/
+		header {
+  			display: flex;
+  			flex-wrap: wrap;
+  			justify-content: space-between;
+  			align-items: center;
+		}
+
+		.headertext {
+			text-align:left;
+		}
+
+		header img {
+  			flex: 0 0 auto;
+		}
+
+header h1 {
+	margin-bottom:0;
+}
+
+header h2 {
+	margin-top:0;
+}
+
+/*#####
+Homepage schedule area
+#######*/
+
+#schedule h2 {
+	padding: 1em 0;
+}
+
+#schedule p {
+	border-bottom:2px solid #272626;
+	padding:1em 0;
+	border-collapse:collapse;
+	display:block;
+	margin:0;
+}
+/*alternate background colors for schedule paragraphs*/
+#schedule p:nth-of-type(odd) {
+    background-color: #ccc;
+	
+}
+#schedule p:nth-of-type(even) {
+    background-color: fff;
+}
+
+
+
+.aside1 h2 {
+	padding: 1em 0;
+}
+
+
+
+@media (max-width: 768px) {
+  
+}
+
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            /*##color change on body only for development to recognize breakpoints ##*/
+			body {
+                background: blue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main aside1 aside1' 
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+			/*##color change on body only for development to recognize breakpoints ##*/
+            body {
+                background: fuchsia;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside1 aside1 aside1 aside1 aside1 aside1'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+			header {
+				flex-wrap: wrap;
+			}
+			.headertext {
+				flex-basis: 100%;
+			}
+
+        }
