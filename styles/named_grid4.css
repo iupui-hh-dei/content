@@ -61,6 +61,7 @@ Navigation Bar
 
         ul li {
             list-style-type: none;
+			display:inline-block;
         }
 		
 		nav ul {
@@ -69,7 +70,7 @@ Navigation Bar
 		}
 
 		nav a {
-    		display: inline-block;
+    		display: block;
    			padding: 0.5em 1em;
    			font-size: 1.5em;
     		color: white;
