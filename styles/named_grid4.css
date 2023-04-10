@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 header {
             grid-area: header;
-            background-color:fff;
+            background-color:#fff;
 	font-family:'Roboto', sans-serif;
         }
 
@@ -19,7 +19,6 @@ header {
 
         .aside1 {
             grid-area: aside1;
-            background-color:rgba(226,233,255,1.00);
 			background-color:#8baddc;
 			padding-left:.5em;
         }
@@ -61,6 +60,7 @@ Navigation Bar
 
         ul li {
             list-style-type: none;
+			display:inline-block;
         }
 		
 		nav ul {
@@ -69,20 +69,23 @@ Navigation Bar
 		}
 
 		nav a {
-    		display: inline-block;
+    		display: block;
    			padding: 0.5em 1em;
    			font-size: 1.5em;
-    		color: white;
-   			border-right: 1px solid white;
+    		color: #fff;
+			text-decoration:none;
+		}
+
+		nav li {
+			border-right: 1px solid #fff;
 		}
 		
-		nav a:last-of-type {
+		nav li:last-of-type {
 			border-right:none;
 		}
 nav a:hover {
-	/*these are just placeholder colors and will need changed*/
-	background-color:green;
-	color:black;
+	background-color:#8baddc;
+	color:#000;text-decoration:underline;
 }
 
 /*######
@@ -134,10 +137,13 @@ Homepage schedule area
 	
 }
 #schedule p:nth-of-type(even) {
-    background-color: fff;
+    background-color: #fff;
 }
 
+/*set time and links to block-level elements with a height of 2em and float them */
+#schedule time { width:25%; float:left;display:inline-block; height:3em;}
 
+#schedule a {width:75%; display:inline-block; height:2em;}
 
 .aside1 h2 {
 	padding: 1em 0;
