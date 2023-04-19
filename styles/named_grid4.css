@@ -270,7 +270,7 @@ Homepage schedule area
         @media only screen and (max-width : 900px) {
             /*##color change on body only for development to recognize breakpoints ##*/
 			body {
-                background: blue;
+                background: #fff;
             }
 
             .grid-container {
@@ -293,7 +293,7 @@ Homepage schedule area
         @media only screen and (max-width : 600px) {
 			/*##color change on body only for development to recognize breakpoints ##*/
             body {
-                background: fuchsia;
+                background: #fff;
             }
 
             .grid-container {
