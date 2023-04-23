@@ -162,6 +162,7 @@ header {
 
 header img {
 	flex: 0 0 auto;
+	max-width:50%;
 }
 
 header h1 {
